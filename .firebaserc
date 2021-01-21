@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fir-votacion-69a31": {
+      "hosting": {
+        "temp": [
+          "fir-votacion-69a31"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fir-votacion-69a31"
+  }
+}

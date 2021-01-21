@@ -20,7 +20,7 @@ export class GotyComponent implements OnInit {
 
     this.gameService.getNominados()
     .subscribe( res => {
-      console.log( res );
+      // console.log( res );
       this.juegos = res;
     })
 
