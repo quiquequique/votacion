@@ -11,7 +11,7 @@
 /node_modules
 
 # enviroment
-/enviroments.local
+/src/enviroments.local
 
 # backend
 /goty-backend
