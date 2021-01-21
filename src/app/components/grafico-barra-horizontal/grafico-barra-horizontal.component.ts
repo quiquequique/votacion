@@ -1,4 +1,5 @@
-import { Component, NgModule, OnDestroy } from '@angular/core';
+
+import { Component, Input, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-grafico-barra-horizontal',
@@ -7,26 +8,28 @@ import { Component, NgModule, OnDestroy } from '@angular/core';
 })
 export class GraficoBarraHorizontalComponent implements OnDestroy{
 
-  intervalo;
+  // intervalo;
 
-  results: any[] = [
-    {
-      "name": "juego 1",
-      "value": 20
-    },
-    {
-      "name": "juego 2",
-      "value": 35
-    },
-    {
-      "name": "juego 3",
-      "value": 16
-    },
-    {
-      "name": "juego 4",
-      "value": 39
-    }
-  ];
+  @Input() results: any[] = [];
+
+  //results: any[] = [
+  //  {
+  //    "name": "juego 1",
+  //    "value": 20
+  //  },
+  //  {
+  //    "name": "juego 2",
+  //    "value": 35
+  //  },
+  //  {
+  //    "name": "juego 3",
+  //    "value": 16
+  //  },
+  //  {
+  //    "name": "juego 4",
+  //    "value": 39
+  //  }
+  //];
 
 
   // options
@@ -43,22 +46,22 @@ export class GraficoBarraHorizontalComponent implements OnDestroy{
 
   constructor() {
 
-    this.intervalo = setInterval( () => {
+    // this.intervalo = setInterval( () => {
 
-      console.log('tick');
+    //   console.log('tick');
 
-      const newResults = [...this.results];
+    //   const newResults = [...this.results];
 
 
-      for ( let i in newResults ) {
+    //   for ( let i in newResults ) {
 
-        newResults[i].value = Math.round( Math.random() * 500)
+    //     newResults[i].value = Math.round( Math.random() * 500)
 
-      }
+    //   }
 
-      this.results = [...newResults];
+    //   this.results = [...newResults];
 
-    }, 1500);
+    // }, 1500);
 
   }
 
@@ -67,7 +70,7 @@ export class GraficoBarraHorizontalComponent implements OnDestroy{
   }
 
   ngOnDestroy() {
-    clearInterval( this.intervalo ) // evita que se siga ejecutando infinitamente el setInterval y se chupe la memoria
+    // clearInterval( this.intervalo ) // evita que se siga ejecutando infinitamente el setInterval y se chupe la memoria
   }
 
 }

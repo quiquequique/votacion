@@ -1,1 +1,17 @@
-<p>goty works!</p>
+<h3>Vote por un juego</h3>
+<hr>
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+    <div class="col" *ngFor='let juego of juegos'>
+        <div class="card bg-dark">
+            <img [src]="juego.url" class="card-img-top" [alt]="juego.name">
+            <div class="card-body">
+                <h5 class="card-title">{{ juego.name }}</h5>
+                <p class="card-text">Click para votar por este juego</p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-outline-success" type="button" (click)='voto(juego.id)'>Votar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
